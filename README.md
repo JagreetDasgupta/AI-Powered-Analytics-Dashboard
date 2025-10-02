@@ -1,221 +1,219 @@
 # ADmyBRAND Analytics Dashboard
 
-A modern, AI-powered analytics dashboard for marketing campaign management and performance tracking.
-LIVE DEMO : https://admybrand-analytics-dashboard.onrender.com
+A modern, AI-powered analytics dashboard for marketing campaign management, audience insights, and report generation. Built with React, React Router, Tailwind CSS, and jsPDF. Deployed and continuously delivered via Render.
 
-## 🚀 Features
+## 🔗 Live Demo
 
-### Core Functionality
-- **Dashboard Overview**: Real-time metrics and performance indicators
-- **Campaign Management**: Create, monitor, and optimize marketing campaigns
-- **Audience Analytics**: Detailed audience segmentation and demographics
-- **Advanced Analytics**: Deep-dive performance metrics and insights
-- **Report Generation**: Automated PDF reports with detailed infographics
-- **Settings Management**: User profile, security, and system preferences
+- App: [admybrand-analytics-dashboard.onrender.com](https://admybrand-analytics-dashboard.onrender.com)
 
-### Premium Features
-- **Subscription Plans**: Free, Pro ($20/month), and Ultra ($200/month) tiers
-- **Payment Integration**: PayPal, Paytm, SuperMoney, and UPI support
-- **AI-Powered Insights**: Advanced analytics with machine learning
-- **White-label Solution**: Custom branding for enterprise clients
+## ✨ Highlights
 
-## 🛠️ Technology Stack
+- **Real-time Overview**: Revenue, users, conversions, growth KPIs
+- **Campaigns**: Status, budget, CTR, conversions with trend comparisons
+- **Audiences**: Segmentation, demographics, growth and engagement
+- **Analytics**: Traffic, bounce rate, session duration, daily/Monthly charts
+- **Reports**: PDF generation with charts and KPIs via `jsPDF`
+- **Settings**: Profile, passwords with strength checks, notifications, integrations
+- **Responsive UI**: Smooth animations, glass-morphism, light/dark theme
 
-- **Frontend**: React 18 with Hooks
-- **Routing**: React Router DOM
-- **Styling**: Tailwind CSS with custom animations
-- **PDF Generation**: jsPDF for report downloads
-- **Icons**: Material Symbols Outlined
-- **Build Tool**: Create React App
+## 🧭 Navigation Map
+
+- `/` → Dashboard
+- `/campaigns` → Campaigns
+- `/audiences` → Audiences
+- `/analytics` → Analytics
+- `/reports` → Reports (with PDF export)
+- `/settings` → Settings (Profile, Security, Notifications, Integrations)
+
+## 🛠 Tech Stack
+
+- **React**: ^19.x with functional components and hooks
+- **Router**: `react-router-dom` ^7.x (SPA routing)
+- **Styling**: Tailwind CSS 3.x + custom `style.css`
+- **PDF**: `jspdf` for exporting reports
+- **Tooling**: Create React App (`react-scripts` 5)
+- **Testing**: `@testing-library/*`, `jest-dom`
 
 ## 📁 Project Structure
 
-```
+```text
 src/
-├── components/           # Reusable UI components
+├── components/
 │   ├── NotificationDropdown.js
 │   └── SkeletonLoader.js
-├── pages/               # Main application pages
-│   ├── Dashboard.js     # Main dashboard with metrics
-│   ├── Analytics.js     # Advanced analytics page
-│   ├── Audiences.js     # Audience management
-│   ├── Campaigns.js     # Campaign management
-│   ├── Reports.js       # Report generation and viewing
-│   └── Settings.js      # User settings and preferences
-├── services/            # API and external services
-│   └── api.js          # API service layer
-├── utils/              # Utility functions
-│   └── exportUtils.js  # Export and data processing utilities
-├── App.js              # Main application component
-├── index.js            # Application entry point
-└── style.css           # Global styles and animations
+├── pages/
+│   ├── Dashboard.js
+│   ├── Analytics.js
+│   ├── Audiences.js
+│   ├── Campaigns.js
+│   ├── Reports.js
+│   └── Settings.js
+├── services/
+│   └── api.js
+├── utils/
+│   └── exportUtils.js
+├── App.js
+├── index.js
+└── style.css
 ```
+
+## 🔌 Key Modules
+
+- `src/pages/Dashboard.js`: KPIs, charts, upgrade and payment modals, notifications
+- `src/pages/Campaigns.js`: Campaign cards, performance comparisons
+- `src/pages/Audiences.js`: Segment cards, growth trends chart
+- `src/pages/Analytics.js`: Traffic metrics and daily bars
+- `src/pages/Reports.js`: Report table, filters, detail modal, `jsPDF` export
+- `src/pages/Settings.js`: Profile, Security (validation + strength), Notifications, Integrations
+- `src/components/SkeletonLoader.js`: Loading skeletons for cards/rows
+- `src/components/NotificationDropdown.js`: In-app notifications menu
+- `src/services/api.js`: Mocked API service for dashboard data
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn package manager
+
+- Node.js ≥ 18
+- npm ≥ 8
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd my-webcrumbs-app
-   ```
+```bash
+git clone <your-repo-url>
+cd my-webcrumbs-app
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### Local Development
 
-3. **Install additional dependencies**
-   ```bash
-   npm install jspdf
-   ```
+```bash
+npm start
+```
 
-4. **Start the development server**
-   ```bash
-   npm start
-   ```
+- Starts on `http://localhost:3000`
 
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-### Build for Production
+### Production Build
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `build` folder.
+- Outputs to `build/` with minification and code-splitting
 
-## 📊 Features Overview
+## ⚙️ Configuration
 
-### Dashboard
-- Real-time revenue, user, and conversion metrics
-- Interactive charts and visualizations
-- Date range filtering (7, 30, 90 days, custom)
-- Theme toggle (light/dark mode)
-
-### Campaign Management
-- Campaign creation and monitoring
-- Budget tracking and spend analysis
-- Performance metrics (CTR, conversions, impressions)
-- Status management (active, paused, completed)
-
-### Audience Analytics
-- Demographic segmentation
-- Platform distribution analysis
-- Interest category tracking
-- Growth trend visualization
-
-### Reports
-- Automated report generation
-- PDF export with infographics
-- Detailed performance metrics
-- Historical data analysis
-
-### Settings
-- User profile management
-- Password security with strength validation
-- Notification preferences
-- Third-party integrations
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Indigo/Purple gradient backgrounds
-- **Accent**: Primary blue (#4F46E5)
-- **Success**: Emerald green (#10B981)
-- **Warning**: Amber yellow (#F59E0B)
-- **Error**: Rose red (#EF4444)
-
-### Typography
-- **Font Family**: System font stack (sans-serif)
-- **Headings**: Bold weights with gradient text effects
-- **Body**: Regular weight with proper contrast ratios
-
-### Components
-- **Glass morphism**: Backdrop blur effects with transparency
-- **Animations**: Smooth transitions and hover effects
-- **Responsive**: Mobile-first design approach
-
-## 🔧 Configuration
-
-### Environment Variables
-Create a `.env` file in the root directory:
+Create a `.env` in the project root if integrating APIs:
 
 ```env
-REACT_APP_API_URL=your_api_endpoint
-REACT_APP_PAYMENT_KEY=your_payment_key
+REACT_APP_API_URL=https://api.example.com
+REACT_APP_PAYMENT_KEY=replace_me
 ```
 
-### Tailwind Configuration
-The project uses a custom Tailwind configuration with:
-- Custom color palette
-- Extended spacing and sizing
-- Custom animations and transitions
+## 🧪 Testing
 
-## 📱 Responsive Design
+```bash
+npm test
+```
 
-The application is fully responsive with breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+- Uses React Testing Library + Jest DOM
 
-## 🔒 Security Features
+## 🧱 Styling & Theming
 
-- Password strength validation
-- Secure authentication flow
-- Input sanitization
-- XSS protection measures
+- Tailwind configured via `tailwind.config.js` and `postcss.config.js`
+- Global utilities and custom effects live in `src/style.css`
+- Theme toggle switches light/dark (class-based)
 
-## 🚀 Performance Optimizations
+## 📦 Scripts (package.json)
 
-- Lazy loading for components
-- Skeleton loaders for better UX
-- Optimized bundle splitting
-- Efficient re-rendering with React hooks
+- `start`: Run dev server
+- `build`: Production build
+- `test`: Run tests
+- `eject`: CRA eject (irreversible)
 
-## 📈 Analytics Integration
+## 🧩 Features Deep Dive
 
-The dashboard supports integration with:
-- Google Analytics
-- Facebook Ads
-- Amazon Q AI Assistant
-- Slack notifications
+- **Dashboard**
+  - Date-range quick filters (7/30/90 days, custom)
+  - Metrics cards with trend indicators
+  - Revenue and campaign composition charts
+  - Notification center and search
+- **Campaigns**
+  - Cards with status chips: active/paused/completed
+  - KPI grid: impressions, clicks, conversions, CTR
+  - Visual comparison chart
+- **Audiences**
+  - Segments: size, growth, engagement, demographics, platforms
+  - Monthly growth chart
+- **Analytics**
+  - Page views, unique visitors, bounce rate, avg session
+  - 30-day traffic bars
+- **Reports**
+  - Filterable/searchable table with status chips
+  - Detail modal and weekly generation chart
+  - One-click PDF export using `jsPDF`
+- **Settings**
+  - Profile with avatar upload and timezone
+  - Security with password strength checks and 2FA toggle placeholder
+  - Notification preferences toggles
+  - Integrations list with connect/disconnect UI
 
-## 🛡️ Browser Support
+## 🧭 Routing Overview
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+```jsx
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Campaigns from "./pages/Campaigns";
+import Audiences from "./pages/Audiences";
+import Analytics from "./pages/Analytics";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
-## 📄 License
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/campaigns" element={<Campaigns />} />
+      <Route path="/audiences" element={<Audiences />} />
+      <Route path="/analytics" element={<Analytics />} />
+      <Route path="/reports" element={<Reports />} />
+      <Route path="/settings" element={<Settings />} />
+    </Routes>
+  );
+}
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🧰 Deployment
+
+- Render configuration via `render.yaml`
+- Build command: `npm run build`
+- Publish directory: `build/`
+
+### Environment on Render
+
+- Node 18+ runtime recommended
+- Configure env vars under service settings if needed
+
+## 🐞 Troubleshooting
+
+- Port already in use: close other dev servers or change `PORT`
+- Blank screen after deploy: ensure correct publish directory (`build/`) and enable SPA fallback on host
+- PDF download issues: Verify browser popup/download permissions and `jsPDF` version
+- Tailwind not applying: check `content` globs in `tailwind.config.js`
+
+## 🔐 Security Notes
+
+- Client-side validations for password complexity
+- Avoid committing secrets; use `.env` + Render environment variables
+- Sanitize user inputs when integrating real APIs
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feat/<name>`
+3. Commit: `git commit -m "feat: add <thing>"`
+4. Push: `git push origin feat/<name>`
 5. Open a Pull Request
 
-## 📞 Support
+## 📄 License
 
-For support and questions:
-- Email: support@admybrand.com
-- Documentation: [docs.admybrand.com](https://docs.admybrand.com)
-- Issues: GitHub Issues page
-
-## 🔄 Version History
-
-- **v1.0.0** - Initial release with core features
-- **v1.1.0** - Added PDF report generation
-- **v1.2.0** - Implemented subscription plans
-- **v1.3.0** - Enhanced security features
+MIT © ADmyBRAND
